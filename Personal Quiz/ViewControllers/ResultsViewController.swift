@@ -10,9 +10,11 @@ import UIKit
 
 class ResultsViewController: UIViewController {
     
+    // MARK: - IBOutlets
     @IBOutlet weak var resultLabelOne: UILabel!
     @IBOutlet weak var resultLabelTwo: UILabel!
     
+    // MARK: - Properties
     var questions: [Answer]!
     
     override func viewDidLoad() {
@@ -21,6 +23,7 @@ class ResultsViewController: UIViewController {
         self.navigationItem.hidesBackButton = true
     }
     
+    // MARK: - Private Methods
     private func calculate() {
         var frequency: [AnimalType: Int] = [:]
         let responseTypes = questions.map { $0.type }
